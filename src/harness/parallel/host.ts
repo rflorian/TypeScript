@@ -398,7 +398,7 @@ namespace Harness.Parallel.Host {
                 state: (test as ErrorInfo).error ? "failed" : "passed",
                 parent: {
                     fullTitle: () => {
-                        test.name.slice(0, test.name.length - 1).join(" ");
+                        return test.name.slice(0, test.name.length - 1).join(" ");
                     }
                 },
                 title: test.name[test.name.length - 1],
